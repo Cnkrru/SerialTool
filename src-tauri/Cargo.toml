@@ -1,0 +1,21 @@
+[package]
+name = "serial-assistant"
+version = "0.1.0"
+description = "串口助手 - Serial Port Assistant"
+authors = ["Cnkrru"]
+edition = "2021"
+
+[lib]
+name = "serial_assistant_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serialport = "4.9.0"
+encoding_rs = "0.8.35"
